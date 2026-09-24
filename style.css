@@ -1,19 +1,250 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #fff8dc;
+* {
+    box-sizing: border-box;
     margin: 0;
-    padding: 50px;
+    padding: 0;
 }
 
-h1 {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffbea;
+    color: #333;
+}
+
+
+/* Navigation */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 8%;
+
+    background-color: #ffd54f;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+
+/* Hero */
+
+.hero {
+    text-align: center;
+    padding: 70px 20px 40px;
+}
+
+.bee {
+    font-size: 90px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-top: 20px;
+}
+
+.tagline {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #666;
+}
+
+
+/* Mood */
+
+.mood-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.mood-section h2 {
+    margin-bottom: 25px;
+}
+
+.mood-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.mood-button {
+    border: 2px solid transparent;
+    background-color: white;
+
+    border-radius: 15px;
+
+    padding: 15px 20px;
+
+    cursor: pointer;
+
+    font-size: 35px;
+
+    transition: 0.2s;
+}
+
+.mood-button span {
+    display: block;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.mood-button:hover {
+    transform: translateY(-4px);
+}
+
+.mood-button.selected {
+    border-color: #f0b400;
+}
+
+#saveMoodButton,
+#chatButton {
+    margin-top: 25px;
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background-color: #f4b400;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+#moodMessage {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+
+/* Chat Card */
+
+.chat-card {
+    max-width: 700px;
+
+    margin: 30px auto;
+
+    padding: 40px;
+
+    text-align: center;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card-icon {
     font-size: 50px;
 }
 
-h2 {
-    font-size: 30px;
+.chat-card h2 {
+    margin: 15px 0;
 }
 
-p {
-    font-size: 20px;
+.chat-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+
+/* Features */
+
+.features {
+    padding: 60px 8%;
+
+    text-align: center;
+}
+
+.features h2 {
+    margin-bottom: 30px;
+}
+
+.feature-container {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.feature-card {
+    background-color: white;
+
+    padding: 30px 20px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.feature-card div {
+    font-size: 40px;
+}
+
+.feature-card h3 {
+    margin: 15px 0 10px;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.5;
+}
+
+
+/* Footer */
+
+footer {
+    margin-top: 50px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background-color: #333;
+
+    color: white;
+}
+
+footer p {
+    margin: 8px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .feature-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
 }

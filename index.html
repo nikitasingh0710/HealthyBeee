@@ -1,21 +1,178 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>HealthyBee</title>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HealthyBee - A Bee That Cares</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>🐝 HealthyBee</h1>
+    <!-- Navigation Bar -->
 
-    <h2>A Bee That Cares</h2>
+    <nav class="navbar">
 
-    <p>Welcome to HealthyBee!</p>
+        <div class="logo">
+            🐝 HealthyBee
+        </div>
 
-    <p>Your friendly space for mental well-being and stress relief.</p>
-    <button id="talkButton">Talk to HealthyBee 🐝</button>
-<script src="script.js"></script>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Chat</a>
+            <a href="#">Mood</a>
+            <a href="#">Help</a>
+            <a href="#">Login</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Main Hero Section -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="bee">
+                🐝
+            </div>
+
+            <h1>Hi, I'm HealthyBee!</h1>
+
+            <p class="tagline">
+                A little bee that cares about you.
+            </p>
+
+        </section>
+
+
+        <!-- Mood Section -->
+
+        <section class="mood-section">
+
+            <h2>How are you feeling today?</h2>
+
+            <div class="mood-options">
+
+                <button class="mood-button" data-mood="Happy">
+                    😊
+                    <span>Happy</span>
+                </button>
+
+                <button class="mood-button" data-mood="Good">
+                    🙂
+                    <span>Good</span>
+                </button>
+
+                <button class="mood-button" data-mood="Okay">
+                    😐
+                    <span>Okay</span>
+                </button>
+
+                <button class="mood-button" data-mood="Sad">
+                    😟
+                    <span>Sad</span>
+                </button>
+
+                <button class="mood-button" data-mood="Very Sad">
+                    😢
+                    <span>Very Sad</span>
+                </button>
+
+            </div>
+
+            <button id="saveMoodButton">
+                Save Mood
+            </button>
+
+            <p id="moodMessage"></p>
+
+        </section>
+
+
+        <!-- Chat Section -->
+
+        <section class="chat-card">
+
+            <div class="card-icon">
+                💬
+            </div>
+
+            <h2>Talk to HealthyBee</h2>
+
+            <p>
+                You can share what's on your mind.
+                HealthyBee is here to listen.
+            </p>
+
+            <button id="chatButton">
+                Start Chat 🐝
+            </button>
+
+        </section>
+
+
+        <!-- Feature Section -->
+
+        <section class="features">
+
+            <h2>Take Care of Yourself</h2>
+
+            <div class="feature-container">
+
+                <div class="feature-card">
+                    <div>🎮</div>
+                    <h3>Stress Busters</h3>
+                    <p>Play simple games and take a break.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div>🎵</div>
+                    <h3>Relax</h3>
+                    <p>Explore relaxing activities and videos.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div>📊</div>
+                    <h3>Mood Tracker</h3>
+                    <p>Keep track of how you feel over time.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div>🗺️</div>
+                    <h3>Find Help</h3>
+                    <p>Find professional mental-health support.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            🐝 HealthyBee — A Bee That Cares
+        </p>
+
+        <p>
+            HealthyBee provides supportive information and is not a replacement for professional medical care.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
