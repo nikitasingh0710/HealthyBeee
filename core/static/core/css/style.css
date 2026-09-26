@@ -280,3 +280,54 @@ footer p {
 .mood-history small {
     color: #777;
 }
+/* Chat Box */
+
+.chat-box {
+    margin-top: 25px;
+    padding: 20px;
+    background: #fffaf0;
+    border-radius: 15px;
+}
+
+.chat-messages {
+    min-height: 120px;
+    max-height: 250px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+}
+
+.bee-message {
+    display: inline-block;
+    padding: 12px 15px;
+    background: white;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.chat-input-area {
+    display: flex;
+    gap: 10px;
+}
+
+#chatInput {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+#sendChatButton {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #f5b400;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#sendChatButton:hover {
+    background: #e0a300;
+}
