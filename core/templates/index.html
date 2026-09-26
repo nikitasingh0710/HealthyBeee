@@ -35,9 +35,11 @@
     </nav>
 
 
-    <!-- Main Hero Section -->
+    <!-- Main Content -->
 
     <main>
+
+        <!-- Hero Section -->
 
         <section class="hero">
 
@@ -89,81 +91,95 @@
 
             </div>
 
+
             <button id="saveMoodButton">
                 Save Mood
             </button>
 
             <p id="moodMessage"></p>
+
+
+            <!-- Mood History -->
+
             <div class="mood-history">
 
-    <h3>My Mood History</h3>
+                <h3>My Mood History</h3>
 
-    {% if moods %}
+                {% if moods %}
 
-        <ul>
-            {% for mood in moods %}
-                <li>
-                    <span>{{ mood.mood }}</span>
-                    <small>{{ mood.created_at|date:"d M Y, h:i A" }}</small>
-                </li>
-            {% endfor %}
-        </ul>
+                    <ul>
 
-    {% else %}
+                        {% for mood in moods %}
 
-        <p>No moods recorded yet.</p>
+                            <li>
+                                <span>{{ mood.mood }}</span>
 
-    {% endif %}
+                                <small>
+                                    {{ mood.created_at|date:"d M Y, h:i A" }}
+                                </small>
+                            </li>
 
-</div>
+                        {% endfor %}
+
+                    </ul>
+
+                {% else %}
+
+                    <p>No moods recorded yet.</p>
+
+                {% endif %}
+
+            </div>
 
         </section>
 
 
         <!-- Chat Section -->
 
-        <!-- Chat Section -->
+        <section class="chat-card">
 
-<section class="chat-card">
-
-    <div class="card-icon">
-        💬
-    </div>
-
-    <h2>Talk to HealthyBee</h2>
-
-    <p>
-        You can share what's on your mind.
-        HealthyBee is here to listen.
-    </p>
-
-    <div class="chat-box">
-
-        <div id="chatMessages" class="chat-messages">
-
-            <div class="bee-message">
-                🐝 Hi! I'm HealthyBee. How are you feeling today?
+            <div class="card-icon">
+                💬
             </div>
 
-        </div>
+            <h2>Talk to HealthyBee</h2>
 
-        <div class="chat-input-area">
+            <p>
+                You can share what's on your mind.
+                HealthyBee is here to listen.
+            </p>
 
-            <input
-                type="text"
-                id="chatInput"
-                placeholder="Type your message..."
-            >
 
-            <button id="sendChatButton">
-                Send
-            </button>
+            <div class="chat-box">
 
-        </div>
+                <div id="chatMessages" class="chat-messages">
 
-    </div>
+                    <div class="bee-message">
+                        🐝 Hi! I'm HealthyBee. How are you feeling today?
+                    </div>
 
-</section>
+                </div>
+
+
+                <div class="chat-input-area">
+
+                    <input
+                        type="text"
+                        id="chatInput"
+                        placeholder="Type your message..."
+                    >
+
+                    <button id="sendChatButton">
+                        Send
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
         <!-- Feature Section -->
 
         <section class="features">
@@ -173,27 +189,135 @@
             <div class="feature-container">
 
                 <div class="feature-card">
+
                     <div>🎮</div>
+
                     <h3>Stress Busters</h3>
-                    <p>Play simple games and take a break.</p>
+
+                    <p>
+                        Play simple games and take a break.
+                    </p>
+
                 </div>
 
+
                 <div class="feature-card">
+
                     <div>🎵</div>
+
                     <h3>Relax</h3>
-                    <p>Explore relaxing activities and videos.</p>
+
+                    <p>
+                        Explore relaxing activities and videos.
+                    </p>
+
                 </div>
 
+
                 <div class="feature-card">
+
                     <div>📊</div>
+
                     <h3>Mood Tracker</h3>
-                    <p>Keep track of how you feel over time.</p>
+
+                    <p>
+                        Keep track of how you feel over time.
+                    </p>
+
                 </div>
 
+
                 <div class="feature-card">
+
                     <div>🗺️</div>
+
                     <h3>Find Help</h3>
-                    <p>Find professional mental-health support.</p>
+
+                    <p>
+                        Find professional mental-health support.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Relaxation Section -->
+
+        <section class="relaxation-section">
+
+            <h2>Take a Little Break 🐝</h2>
+
+            <p>
+                Sometimes a small break can help you relax and refresh.
+            </p>
+
+
+            <div class="relaxation-container">
+
+
+                <!-- Stress Busters -->
+
+                <div class="relaxation-card">
+
+                    <div class="relaxation-icon">
+                        🎮
+                    </div>
+
+                    <h3>Stress Busters</h3>
+
+                    <p>
+                        Play simple games and give your mind a little break.
+                    </p>
+
+                    <button>
+                        Coming Soon
+                    </button>
+
+                </div>
+
+
+                <!-- Relaxing Activities -->
+
+                <div class="relaxation-card">
+
+                    <div class="relaxation-icon">
+                        🎵
+                    </div>
+
+                    <h3>Relaxing Activities</h3>
+
+                    <p>
+                        Explore calming activities and relaxing content.
+                    </p>
+
+                    <button>
+                        Coming Soon
+                    </button>
+
+                </div>
+
+
+                <!-- Positive Thoughts -->
+
+                <div class="relaxation-card">
+
+                    <div class="relaxation-icon">
+                        💡
+                    </div>
+
+                    <h3>Positive Thoughts</h3>
+
+                    <p>
+                        Get a small encouraging message from HealthyBee.
+                    </p>
+
+                    <button>
+                        Coming Soon
+                    </button>
+
                 </div>
 
             </div>
@@ -212,7 +336,8 @@
         </p>
 
         <p>
-            HealthyBee provides supportive information and is not a replacement for professional medical care.
+            HealthyBee provides supportive information and is not a replacement
+            for professional medical care.
         </p>
 
     </footer>
