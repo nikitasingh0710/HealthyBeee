@@ -94,6 +94,28 @@
             </button>
 
             <p id="moodMessage"></p>
+            <div class="mood-history">
+
+    <h3>My Mood History</h3>
+
+    {% if moods %}
+
+        <ul>
+            {% for mood in moods %}
+                <li>
+                    <span>{{ mood.mood }}</span>
+                    <small>{{ mood.created_at|date:"d M Y, h:i A" }}</small>
+                </li>
+            {% endfor %}
+        </ul>
+
+    {% else %}
+
+        <p>No moods recorded yet.</p>
+
+    {% endif %}
+
+</div>
 
         </section>
 

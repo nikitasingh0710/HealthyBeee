@@ -4,7 +4,8 @@ from .models import Mood
 
 
 def home(request):
-    return render(request, "index.html")
+    moods = Mood.objects.order_by("-created_at")
+    return render(request, "index.html", {"moods": moods})
 
 
 def save_mood(request):
